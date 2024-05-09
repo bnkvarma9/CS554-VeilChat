@@ -8,7 +8,7 @@ import CheckUser from './CheckUser';
 const UserFilter = (props) => {
     const [gender, setGender] = useState('');
     const [age, setAge] = useState('');
-    const [language, setLanguage] = useState('');
+    const [language, setLanguage] = useState([]);
     const [distance, setDistance] = useState('');
     const [userLocation, setUserLocation] = useState(null);
     const [locationAccessDenied, setLocationAccessDenied] = useState(false);

@@ -28,7 +28,7 @@ function Profile(){
     const [uploaded, setUploaded]=useState(false);
     const[error, setError]=useState(null);
     const navigate=useNavigate();
-    const [languages, setLanguages]=useState("");
+    const [languages, setLanguages]=useState([]);
     const [uploadError, setUploadError] = useState(null);
     const [imageFile, setImageFile] = useState(null);
     const [formSubmitted, setFormSubmitted] = useState(false);
@@ -278,7 +278,6 @@ function Profile(){
     
         {
                 const userDocRef = doc(db, "users", currentUser.uid);
-                //console.log(userDocRef)
                 await updateDoc(userDocRef, {
                     firstName: fname||"",
                     lastName: lname||"",
